@@ -1,0 +1,950 @@
+/* ===== 기본 설정 ===== */
+:root {
+    --primary: #0891b2;
+    --primary-dark: #0e7490;
+    --secondary: #1e40af;
+    --accent: #d4a574;
+    --accent-light: #e8c9a8;
+    --text: #1f2937;
+    --text-light: #6b7280;
+    --bg: #ffffff;
+    --bg-alt: #f8fafc;
+    --bg-dark: #0f172a;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    color: var(--text);
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== 네비게이션 ===== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.nav-logo img {
+    height: 50px;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--primary);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background: var(--text);
+    transition: 0.3s;
+}
+
+/* ===== 히어로 섹션 ===== */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+    position: relative;
+    padding: 100px 20px;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="40" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/></svg>');
+    background-size: 100px;
+    opacity: 0.5;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: white;
+}
+
+.hero-logo {
+    width: 180px;
+    margin-bottom: 30px;
+    filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.slogan {
+    font-size: 1.3rem;
+    color: var(--accent-light);
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.hero-desc {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--accent);
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.btn-primary:hover {
+    background: var(--accent-light);
+    color: var(--text);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== 섹션 공통 ===== */
+.section {
+    padding: 100px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.2rem;
+    margin-bottom: 60px;
+    color: var(--text);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--accent));
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* ===== 소개 섹션 ===== */
+.about {
+    background: var(--bg);
+}
+
+.vision-mission {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.vm-card {
+    background: var(--bg-alt);
+    padding: 40px;
+    border-radius: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.vm-card:hover {
+    transform: translateY(-5px);
+}
+
+.vm-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 20px;
+    color: var(--primary);
+}
+
+.vm-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.vm-card h3 {
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+.vm-card p {
+    color: var(--text);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* 핵심가치 */
+.core-values {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.core-values h3 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.highlight {
+    color: var(--primary);
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.value-item {
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    padding: 30px 20px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.value-letter {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--accent-light);
+}
+
+.value-word {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.value-meaning {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* 조직도 */
+.organization {
+    margin-bottom: 60px;
+}
+
+.organization h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.org-chart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.org-level {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.org-box {
+    background: var(--primary);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: 500;
+    text-align: center;
+    min-width: 120px;
+}
+
+.org-box.org-side {
+    background: var(--secondary);
+}
+
+.org-box.org-dept {
+    background: var(--bg-alt);
+    color: var(--text);
+    border: 2px solid var(--primary);
+}
+
+.org-line {
+    width: 2px;
+    height: 20px;
+    background: var(--primary);
+}
+
+.org-bottom {
+    gap: 15px;
+}
+
+/* 임원 소개 */
+.executives h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.exec-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.exec-card {
+    text-align: center;
+    padding: 30px 20px;
+    background: var(--bg-alt);
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.exec-card:hover {
+    transform: translateY(-5px);
+}
+
+.exec-photo {
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.exec-photo svg {
+    width: 50px;
+    height: 50px;
+}
+
+.exec-card h4 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.exec-title {
+    color: var(--text-light);
+}
+
+/* ===== 사업안내 섹션 ===== */
+.business {
+    background: var(--bg-alt);
+}
+
+.business-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.business-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.business-card:hover {
+    transform: translateY(-10px);
+}
+
+.business-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+.business-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.business-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.business-card ul {
+    list-style: none;
+}
+
+.business-card li {
+    padding: 8px 0;
+    color: var(--text-light);
+    position: relative;
+    padding-left: 20px;
+}
+
+.business-card li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+}
+
+/* 핵심 프로그램 */
+.programs {
+    text-align: center;
+}
+
+.programs h3 {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.program-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.program-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent);
+    text-align: left;
+}
+
+.program-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.program-badge {
+    background: var(--accent);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.program-card h4 {
+    color: var(--text);
+    font-size: 1.2rem;
+}
+
+.program-card p {
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* ===== 연혁 섹션 ===== */
+.history {
+    background: var(--bg);
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 60px;
+    padding-left: 50px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 20px;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--primary), var(--accent));
+    border-radius: 3px;
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 16px;
+    height: 16px;
+    background: var(--primary);
+    border: 4px solid white;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px var(--primary);
+}
+
+.timeline-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.timeline-content {
+    background: var(--bg-alt);
+    padding: 25px 30px;
+    border-radius: 15px;
+}
+
+.timeline-content h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: var(--text);
+}
+
+.timeline-content p,
+.timeline-content li {
+    color: var(--text-light);
+}
+
+.timeline-content ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.timeline-content li {
+    padding: 5px 0;
+}
+
+/* 성과 통계 */
+.stats h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px;
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
+    border-radius: 20px;
+    color: white;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: var(--accent-light);
+}
+
+.stat-label {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+/* ===== 후원안내 섹션 ===== */
+.support {
+    background: var(--bg-alt);
+}
+
+.support-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.support-info h3,
+.member-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    color: var(--text);
+}
+
+.support-info > p {
+    color: var(--text-light);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.account-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 25px;
+    border: 2px solid var(--primary);
+}
+
+.account-box h4 {
+    color: var(--primary);
+    margin-bottom: 15px;
+}
+
+.bank {
+    font-size: 1.1rem;
+    color: var(--text);
+    margin-bottom: 5px;
+}
+
+.account-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.account-holder {
+    color: var(--text-light);
+}
+
+.benefit-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+}
+
+.benefit-box h4 {
+    margin-bottom: 15px;
+    color: var(--text);
+}
+
+.benefit-box ul {
+    list-style: none;
+}
+
+.benefit-box li {
+    padding: 8px 0;
+    color: var(--text-light);
+    padding-left: 25px;
+    position: relative;
+}
+
+.benefit-box li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.member-types {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.member-type {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    border-left: 4px solid var(--accent);
+}
+
+.member-type h4 {
+    color: var(--primary);
+    margin-bottom: 10px;
+}
+
+.member-type p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* ===== 오시는길 섹션 ===== */
+.contact {
+    background: var(--bg);
+}
+
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.info-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.info-item svg {
+    width: 24px;
+    height: 24px;
+    color: var(--primary);
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.info-item h4 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: var(--text);
+}
+
+.info-item p {
+    color: var(--text-light);
+}
+
+.map-placeholder {
+    background: var(--bg-alt);
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.map-box {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+    color: var(--text-light);
+}
+
+.map-box p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.map-box span {
+    font-size: 0.9rem;
+}
+
+/* ===== 푸터 ===== */
+.footer {
+    background: var(--bg-dark);
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+}
+
+.footer-logo img {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-logo p {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.footer-info p {
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.footer-bottom {
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+}
+
+/* ===== 반응형 ===== */
+@media (max-width: 1024px) {
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .exec-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .business-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .program-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .support-content,
+    .contact-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        gap: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        transform: translateY(-150%);
+        transition: transform 0.3s;
+    }
+
+    .nav-menu.active {
+        transform: translateY(0);
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .slogan {
+        font-size: 1rem;
+    }
+
+    .hero-desc {
+        font-size: 0.95rem;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+        margin-bottom: 40px;
+    }
+
+    .vision-mission {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .exec-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .member-types {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .org-bottom {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    .values-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exec-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .stat-number {
+        font-size: 2.5rem;
+    }
+}
