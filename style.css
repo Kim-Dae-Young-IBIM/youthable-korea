@@ -782,29 +782,14 @@ body {
     color: var(--text-light);
 }
 
-.map-placeholder {
-    background: var(--bg-alt);
+.map-container {
     border-radius: 20px;
     overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
 }
 
-.map-box {
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
-    color: var(--text-light);
-}
-
-.map-box p {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-}
-
-.map-box span {
-    font-size: 0.9rem;
+.map-container iframe {
+    display: block;
 }
 
 /* ===== 푸터 ===== */
