@@ -345,7 +345,7 @@ body {
 
 .exec-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -385,6 +385,22 @@ body {
 
 .exec-title {
     color: var(--text-light);
+}
+
+.exec-desc {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+.exec-chairman {
+    border: 2px solid var(--accent);
+    background: linear-gradient(to bottom, rgba(212, 165, 116, 0.08), var(--bg-alt));
+}
+
+.exec-photo-auditor {
+    background: linear-gradient(135deg, var(--secondary), #4338ca) !important;
 }
 
 /* ===== 사업안내 섹션 ===== */
@@ -469,7 +485,7 @@ body {
 
 .program-cards {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 25px;
 }
 
@@ -845,6 +861,10 @@ body {
 
     .program-cards {
         grid-template-columns: 1fr;
+    }
+
+    .member-types {
+        grid-template-columns: 1fr 1fr;
     }
 
     .stats-grid {

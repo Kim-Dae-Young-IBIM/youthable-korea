@@ -40,7 +40,7 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // 애니메이션 대상 요소들
-document.querySelectorAll('.vm-card, .value-item, .exec-card, .business-card, .program-card, .timeline-item, .stat-item').forEach(el => {
+document.querySelectorAll('.vm-card, .value-item, .exec-card, .business-card, .program-card, .timeline-item, .stat-item, .member-type').forEach(el => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(30px)';
     el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
