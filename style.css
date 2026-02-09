@@ -326,6 +326,17 @@ body {
     border: 2px solid var(--primary);
 }
 
+.org-box.org-research {
+    background: var(--accent);
+    color: white;
+    font-size: 0.85rem;
+    padding: 15px 20px;
+}
+
+.org-dual {
+    gap: 30px;
+}
+
 .org-line {
     width: 2px;
     height: 20px;
@@ -933,6 +944,11 @@ body {
 
     .org-bottom {
         flex-direction: column;
+    }
+
+    .org-dual {
+        flex-direction: column;
+        gap: 15px;
     }
 }
 
