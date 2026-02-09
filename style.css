@@ -333,8 +333,15 @@ body {
     padding: 15px 20px;
 }
 
-.org-dual {
-    gap: 30px;
+.org-with-side {
+    position: relative;
+    justify-content: center;
+}
+
+.org-side-branch {
+    width: 40px;
+    height: 2px;
+    background: var(--primary);
 }
 
 .org-line {
@@ -946,9 +953,14 @@ body {
         flex-direction: column;
     }
 
-    .org-dual {
+    .org-with-side {
         flex-direction: column;
-        gap: 15px;
+        gap: 10px;
+    }
+
+    .org-side-branch {
+        width: 2px;
+        height: 15px;
     }
 }
 
