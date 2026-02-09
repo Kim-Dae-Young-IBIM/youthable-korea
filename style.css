@@ -335,13 +335,27 @@ body {
 
 .org-with-side {
     position: relative;
+    display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.org-with-side > .org-box:first-child {
+    z-index: 1;
 }
 
 .org-side-branch {
     width: 40px;
     height: 2px;
     background: var(--primary);
+}
+
+.org-side-items {
+    position: absolute;
+    left: 50%;
+    display: flex;
+    align-items: center;
+    margin-left: 60px;
 }
 
 .org-line {
@@ -953,14 +967,13 @@ body {
         flex-direction: column;
     }
 
-    .org-with-side {
-        flex-direction: column;
-        gap: 10px;
+    .org-side-items {
+        position: static;
+        margin-left: 10px;
     }
 
     .org-side-branch {
-        width: 2px;
-        height: 15px;
+        width: 20px;
     }
 }
 
