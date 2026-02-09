@@ -287,8 +287,10 @@ body {
 }
 
 .value-meaning {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     opacity: 0.8;
+    word-break: keep-all;
+    line-height: 1.4;
 }
 
 /* 조직도 */
