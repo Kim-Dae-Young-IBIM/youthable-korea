@@ -343,6 +343,8 @@ body {
     color: white;
     font-size: 0.85rem;
     padding: 15px 20px;
+    min-width: 140px;
+    word-break: keep-all;
 }
 
 .org-with-side {
