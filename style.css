@@ -243,6 +243,7 @@ body {
     color: var(--text);
     font-size: 1.1rem;
     line-height: 1.6;
+    word-break: keep-all;
 }
 
 /* 핵심가치 */
