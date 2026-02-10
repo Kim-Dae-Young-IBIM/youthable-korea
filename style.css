@@ -574,11 +574,21 @@ body {
     word-break: keep-all;
 }
 
+.program-goal,
+.program-detail {
+    display: flex;
+    align-items: flex-start;
+    word-break: keep-all;
+}
+
+.program-goal strong,
+.program-detail strong {
+    flex-shrink: 0;
+    margin-right: 0.3em;
+}
+
 .program-detail {
     font-size: 0.92rem;
-    word-break: keep-all;
-    padding-left: 5.5em;
-    text-indent: -5.5em;
 }
 
 /* ===== 연혁 섹션 ===== */
