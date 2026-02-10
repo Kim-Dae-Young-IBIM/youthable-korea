@@ -992,13 +992,45 @@ body {
         flex-direction: column;
     }
 
+    .org-level {
+        gap: 10px;
+    }
+
+    .org-box {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+        min-width: auto;
+    }
+
+    .org-with-side {
+        flex-wrap: nowrap;
+    }
+
     .org-side-items {
         position: static;
-        margin-left: 10px;
+        display: flex;
+        align-items: center;
+        margin-left: 0;
     }
 
     .org-side-branch {
-        width: 20px;
+        width: 15px;
+        flex-shrink: 0;
+    }
+
+    .org-box.org-research {
+        font-size: 0.75rem;
+        padding: 8px 10px;
+    }
+
+    .org-box.org-side {
+        padding: 10px 15px;
+        font-size: 0.85rem;
+    }
+
+    .org-box.org-dept {
+        font-size: 0.8rem;
+        padding: 10px 12px;
     }
 }
 
