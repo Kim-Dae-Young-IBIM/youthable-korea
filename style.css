@@ -57,11 +57,13 @@ body {
 }
 
 .nav-logo img {
+    width: 50px;
     height: 50px;
     background: white;
     border-radius: 50%;
     padding: 4px;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 .nav-menu {
@@ -131,8 +133,9 @@ body {
     filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.2));
     background: white;
     border-radius: 50%;
-    padding: 15px;
-    object-fit: contain;
+    padding: 10px;
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 .hero h1 {
@@ -852,12 +855,14 @@ body {
 }
 
 .footer-logo img {
+    width: 60px;
     height: 60px;
     margin-bottom: 15px;
     background: white;
     border-radius: 50%;
     padding: 5px;
-    object-fit: contain;
+    object-fit: cover;
+    object-position: center 30%;
 }
 
 .footer-logo p {
