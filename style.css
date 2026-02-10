@@ -569,10 +569,14 @@ body {
 
 .program-goal {
     margin-bottom: 8px;
+    word-break: keep-all;
 }
 
 .program-detail {
     font-size: 0.92rem;
+    word-break: keep-all;
+    padding-left: 5.5em;
+    text-indent: -5.5em;
 }
 
 /* ===== 연혁 섹션 ===== */
