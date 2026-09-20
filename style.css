@@ -904,10 +904,235 @@ body {
     font-size: 0.9rem;
 }
 
+
+/* ===== 정관 기반 사업안내 ===== */
+.section-lead {
+    max-width: 900px;
+    margin: -20px auto 40px;
+    text-align: center;
+    color: var(--text-light);
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+.cite {
+    font-size: 0.8em;
+    font-weight: 400;
+    color: var(--primary);
+    white-space: nowrap;
+}
+
+.charter-grid {
+    display: grid;
+    grid-template-columns: 1.15fr 1fr;
+    gap: 25px;
+    margin-bottom: 60px;
+}
+
+.charter-side {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.charter-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    border-left: 4px solid var(--primary);
+    text-align: left;
+}
+
+.charter-main {
+    border-left-color: var(--accent);
+}
+
+.charter-card h3 {
+    font-size: 1.15rem;
+    color: var(--text);
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.charter-sub {
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+
+.charter-card ol {
+    list-style: none;
+    counter-reset: charter;
+}
+
+.charter-card li {
+    counter-increment: charter;
+    position: relative;
+    padding: 7px 0 7px 32px;
+    color: var(--text-light);
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.charter-card li::before {
+    content: counter(charter);
+    position: absolute;
+    left: 0;
+    top: 8px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: white;
+    font-size: 0.75rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.charter-main li::before {
+    background: var(--accent);
+}
+
+.charter-foot {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px dashed #e5e7eb;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.6;
+    word-break: keep-all;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.exec-note {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    margin: -25px 0 30px;
+    word-break: keep-all;
+}
+
+/* ===== 기부금 공개 ===== */
+.donation-report {
+    margin-top: 60px;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    border-top: 4px solid var(--primary);
+    scroll-margin-top: 90px;
+}
+
+.donation-report h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.donation-lead {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto 30px;
+    line-height: 1.8;
+    word-break: keep-all;
+}
+
+.donation-table-wrap {
+    overflow-x: auto;
+}
+
+.donation-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 0.95rem;
+}
+
+.donation-table th,
+.donation-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid #e5e7eb;
+    word-break: keep-all;
+}
+
+.donation-table th {
+    background: var(--bg-alt);
+    color: var(--text);
+    font-weight: 700;
+}
+
+.donation-table td {
+    color: var(--text-light);
+}
+
+.donation-table td:first-child {
+    font-weight: 500;
+    color: var(--text);
+}
+
+.donation-note {
+    margin-top: 20px;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    text-align: center;
+    word-break: keep-all;
+}
+
+/* ===== 푸터 제보 링크 ===== */
+.footer-report h4 {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.footer-report p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+    word-break: keep-all;
+}
+
+.footer-report ul {
+    list-style: none;
+}
+
+.footer-report li {
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.footer-report a {
+    color: var(--accent-light);
+    text-decoration: none;
+}
+
+.footer-report a:hover {
+    text-decoration: underline;
+}
+
 /* ===== 반응형 ===== */
 @media (max-width: 1024px) {
     .values-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+        gap: 30px;
     }
 
     .exec-grid {
@@ -937,6 +1162,24 @@ body {
 }
 
 @media (max-width: 768px) {
+    .charter-card,
+    .donation-report {
+        padding: 25px 20px;
+    }
+
+    .donation-table {
+        font-size: 0.85rem;
+    }
+
+    .donation-table th,
+    .donation-table td {
+        padding: 10px 8px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
     .nav-menu {
         position: fixed;
         top: 70px;
