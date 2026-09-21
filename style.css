@@ -457,7 +457,7 @@ body {
 
 .business-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     margin-bottom: 60px;
 }
@@ -489,6 +489,12 @@ body {
 .business-icon svg {
     width: 30px;
     height: 30px;
+}
+
+.business-card h3 .cite {
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin-left: 6px;
 }
 
 .business-card h3 {
@@ -589,7 +595,7 @@ body {
 }
 
 .program-detail {
-    font-size: 0.92rem;
+    font-size: 0.95rem;
 }
 
 /* ===== 연혁 섹션 ===== */
